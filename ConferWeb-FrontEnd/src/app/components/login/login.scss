@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 200px;
+    border: 2px solid #0084FF;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+    background: white;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 400px;
+    height: 400px;
+}
+
+.login-inputs {
+    align-self: center;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    display: flex;
+    height: 48px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: #0084FF;
+    border-width: 2px;
+    margin-bottom: 5px;
+    padding-left: 16px;
+    color: black;
+    outline: none;
+}
+
+.input-box::placeholder {
+    color: black;
+}
+
+.login-error {
+    font-size: 16px;
+    align-self: center;
+    color: red;
+}
+
+h1 {
+    margin-bottom: 30px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 80px;
+}
+
+button {
+    align-self: center;
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: #0084FF;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5468da;
+}
+

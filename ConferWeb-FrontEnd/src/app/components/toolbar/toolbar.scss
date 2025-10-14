@@ -1,0 +1,49 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.title {
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #0084FF;
+}
+
+a {
+  justify-items: center;
+  border: none;
+  background: transparent;
+  min-width: 110px;
+  padding: 4px 12px 4px 12px;
+  cursor: pointer;
+  transition: border 0.1s;
+  transition: background 0.3s;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #1990ff;
+}
+
+ a > i {
+  color: white;
+  font-size: 24px;
+}

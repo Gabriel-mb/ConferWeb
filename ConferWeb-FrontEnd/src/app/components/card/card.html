@@ -1,0 +1,27 @@
+<div>
+    <p>{{borrowedData?.employee.name}}</p>
+    <p>{{borrowedData?.employee.employeeId}}</p>
+</div>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Patrimônio</th>
+        <th>Nome</th>
+        <th>Fornecedor</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (elemento of borrowedData?.borrowedItems || []; track elemento.idEquipment) {
+      <tr>
+        <td>{{ elemento.idEquipment }}</td>
+        <td>{{ elemento.equipmentName }}</td>
+        <td>{{ elemento.supplierName }}</td>
+        <td>{{ elemento.date }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

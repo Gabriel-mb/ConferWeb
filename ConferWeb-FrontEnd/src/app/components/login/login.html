@@ -1,0 +1,13 @@
+<div class="container">
+    <form #frm="ngForm" class="login-form" (ngSubmit)="onLogin(frm)">
+        <h1>CONFER</h1>
+        <div class="login-inputs">
+            <input class="input-box" type="text" name="username" id="username" placeholder="Usuário" [(ngModel)]="credentials.username" required>
+            <input class="input-box" type="password" name="password" id="password" placeholder="Senha" [(ngModel)]="credentials.password" required>
+        </div>
+        @if (!verification) {
+            <p class="login-error">Usuário ou Senha Inválido!</p>
+        }
+        <button type="submit">Login</button>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+     <h1>Pesquise uma Matrícula</h1>
+    <form #frm="ngForm" class="search-form" (ngSubmit)="onSearch(frm)">
+        <div class="input-box">
+        <input type="text" name="id" id="id" placeholder="Matrícula" [(ngModel)]="id" required>
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+    </form>
+</div>

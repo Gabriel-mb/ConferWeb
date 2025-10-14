@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 900px; /* Largura reduzida para ficar mais compacto */
+    height: 400px; /* Altura menor */
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px; /* Bordas menos arredondadas */
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+    background: white;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    padding: 0; /* Remove padding da tabela */
+    display: block;
+    max-height: 100%;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #007bff;
+    color: white;
+    position: sticky;
+    width: 100%;
+}
+
+th {
+    background: #007bff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 8px 35px; /* Padding reduzido */
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Adiciona hover suave */
+tbody tr:hover {
+    background-color: #f8f9fa !important;
+}
+
+/* Estilização da scrollbar mais discreta */
+table::-webkit-scrollbar {
+    width: 6px;
+}
+
+table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0 10px 10px 0;
+}
+
+table::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 3px;
+}
+
+table::-webkit-scrollbar-thumb:hover {
+    background: #808080;
+}
+
+/* Remove o padding do container interno se tiver */
+.container > * {
+    width: 100%;
+}
