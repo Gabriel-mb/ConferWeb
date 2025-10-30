@@ -2,7 +2,7 @@ package com.Confer.ConferWeb.Controllers;
 
 import com.Confer.ConferWeb.Model.DTO.LoginRequest;
 import com.Confer.ConferWeb.Model.DTO.LoginResponse;
-import com.Confer.ConferWeb.Model.Entity.User;
+import com.Confer.ConferWeb.Model.Entity.Users;
 import com.Confer.ConferWeb.Repository.LoginRepository;
 import com.Confer.ConferWeb.Services.security.TokenService;
 import lombok.RequiredArgsConstructor;
@@ -22,10 +22,10 @@ public class LoginController {
 
     @PostMapping
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest body){
-        User user = this.repository.findByUsername(body.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
-        if(passwordEncoder.matches(body.getPassword(), user.getPassword())) {
-            String token = this.tokenService.generateToken(user);
-            return ResponseEntity.ok(new LoginResponse(user.getUsername(), token));
+        Users users = this.repository.findByUsername(body.getUsername()).orElseThrow(() -> new RuntimeException("Users not found"));
+        if(passwordEncoder.matches(body.getPassword(), users.getPassword())) {
+            String token = this.tokenService.generateToken(users);
+            return ResponseEntity.ok(new LoginResponse(users.getUsername(), token));
         }
         return ResponseEntity.badRequest().build();
     }

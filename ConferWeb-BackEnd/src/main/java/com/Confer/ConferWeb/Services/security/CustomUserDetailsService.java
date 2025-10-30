@@ -1,6 +1,6 @@
 package com.Confer.ConferWeb.Services.security;
 
-import com.Confer.ConferWeb.Model.Entity.User;
+import com.Confer.ConferWeb.Model.Entity.Users;
 import com.Confer.ConferWeb.Repository.LoginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = this.loginRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), new ArrayList<>());
+        Users users = this.loginRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Users not found"));
+        return new org.springframework.security.core.userdetails.User(users.getUsername(), users.getPassword(), new ArrayList<>());
     }
 }
